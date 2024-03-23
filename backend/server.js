@@ -3,9 +3,7 @@ import express from "express";
 const app = express();
 // app.use()
 
-
-
-const jokes= [
+const jokes = [
   {
     setup: "Why did the JavaScript developer go broke?",
     punchline: "Because he used up all his cache!",
