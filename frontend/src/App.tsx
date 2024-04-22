@@ -19,7 +19,7 @@ function App() {
       try {
         const response = await axios.get<ALLJOKETYPE>("/api/jokes");
 
-        setJokesData(response.data ?? { alljokes: [] });
+        setJokesData(response.data ?? { alljodfdkes: [] });
       } catch (error: string | null) {
         setError(error);
       }
