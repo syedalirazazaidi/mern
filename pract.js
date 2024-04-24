@@ -50,7 +50,6 @@
 
 // Notice that the solution set must not contain duplicate triplets.
 
-
 // using for loop
 // var nums = [0, 1, 1];
 // var newarr = [];
@@ -66,4 +65,24 @@
 // }
 // console.log(newarr);
 
-// using 2 pointer
+// 1 using 3 pointer
+var nums = [1, 2, 7, 11];
+var target = 18;
+var left = 0;
+var getindex;
+var right = nums.length - 1;
+while (left < right) {
+  var sum = nums[left] + nums[right];
+  //1+11=12  //1+7=8
+  if (sum === target) {
+    getindex = [left, right];
+  }
+  right--;  //3[11] //2[7]  //1[2] //0[1]
+ 
+  if (left >= right) {
+    left++;
+    // 0[1] 1[2] 2[7] 3[11]
+    right = nums.length - 1;   //3
+  }
+}
+console.log(getindex);
